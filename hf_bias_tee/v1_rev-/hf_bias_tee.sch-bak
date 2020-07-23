@@ -1,0 +1,189 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "HF Bias Tee"
+Date "2020-07-23"
+Rev "-"
+Comp "Amateur Radio"
+Comment1 ""
+Comment2 "creativecommons.org/licenses/by/4.0/"
+Comment3 "License: CC BY 4.0"
+Comment4 "Author: Zach Leffke, KJ4QLP"
+$EndDescr
+$Comp
+L Device:C C2
+U 1 1 5F191233
+P 4750 2750
+F 0 "C2" V 4498 2750 50  0000 C CNN
+F 1 "0.1uF" V 4589 2750 50  0000 C CNN
+F 2 "digikey-footprints:0805" H 4788 2600 50  0001 C CNN
+F 3 "~" H 4750 2750 50  0001 C CNN
+	1    4750 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5F192088
+P 4750 3500
+F 0 "C1" V 4498 3500 50  0000 C CNN
+F 1 "0.1uF" V 4589 3500 50  0000 C CNN
+F 2 "digikey-footprints:0805" H 4788 3350 50  0001 C CNN
+F 3 "~" H 4750 3500 50  0001 C CNN
+	1    4750 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:L L1
+U 1 1 5F1925AF
+P 5000 3150
+F 0 "L1" H 5053 3196 50  0000 L CNN
+F 1 "4.7uH" H 5053 3105 50  0000 L CNN
+F 2 "Inductor_SMD:L_1008_2520Metric" H 5000 3150 50  0001 C CNN
+F 3 "~" H 5000 3150 50  0001 C CNN
+	1    5000 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J2
+U 1 1 5F19325B
+P 5500 3500
+F 0 "J2" H 5600 3550 50  0000 L CNN
+F 1 "RF+DC" H 5600 3450 50  0000 L CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132134-10_Vertical" H 5500 3500 50  0001 C CNN
+F 3 " ~" H 5500 3500 50  0001 C CNN
+	1    5500 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J1
+U 1 1 5F1946C2
+P 4000 3500
+F 0 "J1" H 4150 3550 50  0000 C CNN
+F 1 "RF" H 4150 3450 50  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132134-10_Vertical" H 4000 3500 50  0001 C CNN
+F 3 " ~" H 4000 3500 50  0001 C CNN
+	1    4000 3500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5F19863E
+P 5500 3700
+F 0 "#PWR03" H 5500 3450 50  0001 C CNN
+F 1 "GND" H 5505 3527 50  0000 C CNN
+F 2 "" H 5500 3700 50  0001 C CNN
+F 3 "" H 5500 3700 50  0001 C CNN
+	1    5500 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5F198FB4
+P 4000 3700
+F 0 "#PWR02" H 4000 3450 50  0001 C CNN
+F 1 "GND" H 4005 3527 50  0000 C CNN
+F 2 "" H 4000 3700 50  0001 C CNN
+F 3 "" H 4000 3700 50  0001 C CNN
+	1    4000 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5F19F817
+P 4500 2850
+F 0 "#PWR01" H 4500 2600 50  0001 C CNN
+F 1 "GND" H 4505 2677 50  0000 C CNN
+F 2 "" H 4500 2850 50  0001 C CNN
+F 3 "" H 4500 2850 50  0001 C CNN
+	1    4500 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3500 5000 3500
+Wire Wire Line
+	5000 3300 5000 3500
+Connection ~ 5000 3500
+Wire Wire Line
+	5000 3500 4900 3500
+Wire Wire Line
+	4600 3500 4200 3500
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5F1A643D
+P 5000 2350
+F 0 "TP1" H 5058 2468 50  0000 L CNN
+F 1 "VIN" H 5058 2377 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 5200 2350 50  0001 C CNN
+F 3 "~" H 5200 2350 50  0001 C CNN
+	1    5000 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J4
+U 1 1 5F1A7B62
+P 4600 2150
+F 0 "J4" V 4662 2194 50  0000 L CNN
+F 1 "DC" V 4753 2194 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 4600 2150 50  0001 C CNN
+F 3 "~" H 4600 2150 50  0001 C CNN
+	1    4600 2150
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J3
+U 1 1 5F1A9041
+P 5500 2750
+F 0 "J3" H 5600 2800 50  0000 L CNN
+F 1 "DC" H 5600 2700 50  0000 L CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132134-10_Vertical" H 5500 2750 50  0001 C CNN
+F 3 " ~" H 5500 2750 50  0001 C CNN
+	1    5500 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5F1ACA85
+P 5500 2950
+F 0 "#PWR04" H 5500 2700 50  0001 C CNN
+F 1 "GND" H 5505 2777 50  0000 C CNN
+F 2 "" H 5500 2950 50  0001 C CNN
+F 3 "" H 5500 2950 50  0001 C CNN
+	1    5500 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5F1ACFF8
+P 4400 2750
+F 0 "TP2" V 4450 3000 50  0000 C CNN
+F 1 "GND" V 4350 3000 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 4600 2750 50  0001 C CNN
+F 3 "~" H 4600 2750 50  0001 C CNN
+	1    4400 2750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4400 2750 4500 2750
+Wire Wire Line
+	4900 2750 5000 2750
+Wire Wire Line
+	5000 2350 5000 2750
+Connection ~ 5000 2750
+Wire Wire Line
+	5000 2750 5300 2750
+Wire Wire Line
+	5000 2750 5000 3000
+Wire Wire Line
+	4600 2350 5000 2350
+Connection ~ 5000 2350
+Wire Wire Line
+	4500 2350 4500 2750
+Connection ~ 4500 2750
+Wire Wire Line
+	4500 2750 4600 2750
+Wire Wire Line
+	4500 2750 4500 2850
+$EndSCHEMATC
